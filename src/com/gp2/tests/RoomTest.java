@@ -13,7 +13,7 @@ import com.gp2.component.Exit;
 import com.gp2.component.Room;
 
 /**
- * @author goup2
+ * @author group2
  * 
  * Test the good work of the room class according to its Javadoc
  * @see com.gp2.component.Room
