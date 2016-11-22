@@ -63,7 +63,9 @@ public class AllExitTest {
 	@Test
 	public void testExitConstructor() {
 		assertEquals(exit2.getDescription(), "thin wooden door");
-		/*assertEquals(exit1,new Exit(roomA, roomB,""));*/
+		assertEquals(exit1.getDescription(),"");
+		assertEquals(exit1.getFirstRoom(),roomA);
+		assertEquals(exit1.getNextRoom(),roomB);
 	}
 	
 	/**
@@ -72,7 +74,10 @@ public class AllExitTest {
 	@Test
 	public void testExitWithItemConstructor() {
 		assertEquals(exitIt2.getDescription(), "strange gate");
-		/*assertEquals(exitIt1,new ExitWithItem(roomA, roomB,"",dummy));*/
+		assertEquals(exitIt1.getRequiredItem(), dummy);
+		assertEquals(exitIt1.getFirstRoom(),roomA);
+		assertEquals(exitIt1.getNextRoom(),roomB);
+		assertEquals(exitIt1.getDescription(),"");
 	}
 	
 	/**
@@ -81,7 +86,11 @@ public class AllExitTest {
 	@Test
 	public void testExitWithStringConstructor() {
 		assertEquals(exitSt2.getDescription(), "THIS DOOR SPEAKS!");
-		/*assertEquals(exitSt1,new ExitWithString(roomA, roomB,"","say hi","hi"));*/
+		assertEquals(exitSt1.getQuery(),"say hello");
+		assertEquals(exitSt1.getAnswer(),"hello");
+		assertEquals(exitSt1.getFirstRoom(),roomA);
+		assertEquals(exitSt1.getNextRoom(),roomB);
+		assertEquals(exitSt1.getDescription(),"");
 	}
 
 	/**
@@ -103,7 +112,7 @@ public class AllExitTest {
 		Player p = new Player("Simon", roomA);
 		p.getInventory().add(dummy);
 		assertTrue(p.getInventory().contains(dummy));
-		assertTrue(exitIt1.canPass(p));/* && exitIt2.canPass(p));*/
+		assertTrue(exitIt1.canPass(p) || exitIt2.canPass(p));
 	}
 	
 	/**
@@ -112,6 +121,7 @@ public class AllExitTest {
 	 */
 	/*@Test
 	public void testCanPassWithString() {
+	
 		fail("We cannot check this now, string input cannot be read now.");
 	}
 	*/
