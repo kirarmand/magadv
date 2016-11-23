@@ -84,7 +84,6 @@ public class Room {
 			return;
 		exits.put(direction, exit);
 	}
-
 	
 	/*
 	 * GETTERS section for the room relative attributes
