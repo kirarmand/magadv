@@ -12,12 +12,10 @@ import java.util.ArrayList;
  * is able to carry.
  */
 
-	public class ItemCreation implements Carriageable{
+	public class ItemCreation{
 
-	/**
-	 * instanciation of all items
-	 */
 
+    //creation of all attributes
 	private Item framboise;
 	private Item myrtille;
 	private Item chocolatBlanc;
@@ -28,12 +26,72 @@ import java.util.ArrayList;
 	private Item sucre;
 	private Item key;
 	private Item oeuf;
-	private Item corne;
+    private Item corne;
 	private Item courgette;
 	private Item carotte;
 	private Item lait;
 
-	public void itemCreation(){
+	//creation of all getters
+    public Item getFramboise() {
+        return framboise;
+    }
+
+    public Item getMyrtille() {
+        return myrtille;
+    }
+
+    public Item getChocolatBlanc() {
+        return chocolatBlanc;
+    }
+
+    public Item getA38() {
+        return A38;
+    }
+
+    public Item getFarine() {
+        return farine;
+    }
+
+    public Item getMuffinMyrtille() {
+        return muffinMyrtille;
+    }
+
+    public Item getMuffinFramboise() {
+        return muffinFramboise;
+    }
+
+    public Item getSucre() {
+        return sucre;
+    }
+
+    public Item getKey() {
+        return key;
+    }
+
+    public Item getOeuf() {
+        return oeuf;
+    }
+
+    public Item getCorne() {
+        return corne;
+    }
+
+    public Item getCourgette() {
+        return courgette;
+    }
+
+    public Item getCarotte() {
+        return carotte;
+    }
+
+    public Item getLait() {
+        return lait;
+    }
+
+    /**
+     * instanciation of all items
+     */
+	public ItemCreation(){
 
 		// instanciate item framboise
 		framboise = new Item ("framboise","Fruit comestible du framboisier, drupe arrondie, formee de nombreux petits grains (drupeoles). [On l'utilise pour fabriquer des jus de fruits, des sirops, des confitures, des sorbets, des liqueurs.]");
