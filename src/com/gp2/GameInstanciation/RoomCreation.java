@@ -23,13 +23,13 @@ public class RoomCreation {
 		//tour
 		tour = new Room("tour","Salle initiale ou se trouve notre licorne");
 		tour.addExit("DOWN", new Exit(tour,cour));
-		tour.addExit("WEST", new Exit(cour,prison));
+		tour.addExit("EAST", new Exit(cour,prison));
 		listRoom.add(tour);
 		
 		//cour
 		cour = new Room("cour","cour principale du chateau");
-		cour.addExit("EAST", new Exit(cour,ecurie));
-		cour.addExit("WEST", new Exit(cour,salleBanquet));
+		cour.addExit("NORTH", new Exit(cour,ecurie));
+		cour.addExit("EAST", new Exit(cour,salleBanquet));
 		cour.addExit("DOWN", new Exit(cour,reserve));
 		listRoom.add(cour);
 		
