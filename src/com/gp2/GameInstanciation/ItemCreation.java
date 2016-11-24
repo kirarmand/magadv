@@ -2,7 +2,6 @@ package com.gp2.GameInstanciation;
 
 import com.gp2.component.*;
 import java.util.ArrayList;
-
 /**
  * @author group2
  *
@@ -16,7 +15,7 @@ import java.util.ArrayList;
 	public class ItemCreation implements Carriageable{
 
 	/**
-	 * The entity constructor-like is used as item constructor.
+	 * instanciation of all items
 	 */
 
 	private Item framboise;
