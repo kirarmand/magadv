@@ -118,7 +118,7 @@ import java.util.ArrayList;
 		sucre = new Item("sucre","Produit alimentaire cristallise, blanc ou roux, de saveur douce, qu'on extrait de la canne à sucre et de la betterave sucriere.");
 
 		//instanciate item key
-		key = new Item("ponykey","clée de la delivrance.");
+		key = new Item("ponykey","clee de la delivrance.");
 
 		//instanciate item oeuf
 		oeuf = new Item("oeuf","Cellule vivante, environnee de reserves alimentaires et d'enveloppes protectrices, et qui, apres formation dans le corps d'une femelle, ponte et fecondation (l'ordre de ces trois phenomenes variant selon le groupe), donnera un jeune de la meme espece. (On parle parfois d'oeuf  chez les especes vivipares, pour designer l'embryon et l'ensemble de ses annexes.)");
