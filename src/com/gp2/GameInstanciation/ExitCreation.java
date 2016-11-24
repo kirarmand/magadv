@@ -27,7 +27,7 @@ public class ExitCreation {
 	private Exit Door_sTV;
 	
 	private RoomCreation roomCr;
-	private Item unlockItem;
+	private ItemCreation unlockItem;
 	private ArrayList<Exit> exitList;
 	
 	public ExitCreation(){
@@ -38,7 +38,7 @@ public class ExitCreation {
 		
 		Door_CT = new Exit(roomCr.getAllRooms().get(1),roomCr.getAllRooms().get(0));
 		exitList.add(Door_CT);
-		Door_CE = new ExitWithItem(roomCr.getAllRooms().get(1),roomCr.getAllRooms().get(3),unlockItem);
+		Door_CE = new ExitWithItem(roomCr.getAllRooms().get(1),roomCr.getAllRooms().get(3),unlockItem.getKey());
 		exitList.add(Door_CE);
 		Door_CsB = new Exit(roomCr.getAllRooms().get(1),roomCr.getAllRooms().get(4));
 		exitList.add(Door_CsB);
