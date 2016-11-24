@@ -12,16 +12,17 @@ import java.util.ArrayList;
  * can only tell his text stored in "sentences" no real
  * dialogue is possible.
  * 
- * A NPC must not have a name, a description or some sentences
+ * A NPC must have a name, a description or some sentences
  * to say. Even if without these attributes the interaction is
  * limited, they remains optional.
  */
 public class NPC extends Entity{
 
 	/**
-	 * 
+	 * This arraylist allows character to speak
 	 */
 	private ArrayList<String> sentences;
+	
 	
 	/**
 	 * 
