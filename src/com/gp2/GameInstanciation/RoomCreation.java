@@ -11,92 +11,98 @@ public class RoomCreation {
 	
 // Attributes which describe each room in the game
 	
-	private Room tour;
-	private Room cour;
-	private Room reserve;
-	private Room ecurie;
-	private Room salleBanquet;
-	private Room salleTrone;
+	private Room tower;
+	private Room courtYard;
+	private Room stock;
+	private Room stable;
+	private Room banquetHall;
+	private Room throneHall;
 	private Room vestibule;
-	private Room prison;
-	private Room cuisine;
+	private Room jail;
+	private Room kitchen;
 	
-	// Tableau qui contiendra toutes les pieces du jeu
+	// Board which contains all game rooms
 	private ArrayList<Room> listRoom; 
+	//  List of exit 
 	private ExitCreation roomList;
 	
 	
 	public RoomCreation(){
 		
-		//Creation de la tour
-		tour = new Room("tour","Salle initiale ou se trouve notre licorne");
-		//Ajout des portes a la piece
-		tour.addExit("DOWN", roomList.getAllDoor().get(0));
-		//Ajout de la piece au tableau
-		listRoom.add(tour);
+		// tower creation 
+		tower = new Room("tower","Salle initiale ou se trouve notre licorne");
+		//addition of doors in room
+		tower.addExit("DOWN", roomList.getAllDoor().get(0));
+		//addition of room in board
+		listRoom.add(tower);
 		
-		//Creation de la cour
-		cour = new Room("cour","cour principale du chateau");
-		//Ajout des portes a la piece
-		cour.addExit("UP", roomList.getAllDoor().get(2));
-		cour.addExit("NORTH", roomList.getAllDoor().get(3));
-		cour.addExit("EAST", roomList.getAllDoor().get(4));
-		cour.addExit("DOWN", roomList.getAllDoor().get(5));
-		//Ajout de la piece au tableau
-		listRoom.add(cour);
+		// courtYard creation 
+		courtYard = new Room("courtYard","courtYard principale du chateau");
+		//addition of doors in room
+		courtYard.addExit("UP", roomList.getAllDoor().get(2));
+		courtYard.addExit("NORTH", roomList.getAllDoor().get(3));
+		courtYard.addExit("EAST", roomList.getAllDoor().get(4));
+		courtYard.addExit("DOWN", roomList.getAllDoor().get(5));
+		//addition of doors in room
+		listRoom.add(courtYard);
 		
-		// Creation de la reserve
-		reserve = new Room("reserve","");
-		//Ajout des portes a la piece
-		reserve.addExit("UP", roomList.getAllDoor().get(7));
-		//Ajout de la piece au tableau
-		listRoom.add(reserve);
+		// stock creation 
+		stock = new Room("stock","");
+		//addition of doors in room
+		stock.addExit("UP", roomList.getAllDoor().get(7));
+		//addition of doors in room
+		listRoom.add(stock);
 		
-		//Creation de l'ecurie
-		ecurie = new Room("Ecurie","Dans cette ecurie il y a des chevaux");
-		//Ajout des portes a la piece
-		ecurie.addExit("SOUTH", roomList.getAllDoor().get(6));
-		//Ajout de la piece au tableau
-		listRoom.add(ecurie);
+		//stable creation
+		stable = new Room("stable","Dans cette stable il y a des chevaux");
+		//addition of doors in room
+		stable.addExit("SOUTH", roomList.getAllDoor().get(6));
+		//addition of doors in room
+		listRoom.add(stable);
 		
-		//Creation de la salle banquet 
-		salleBanquet = new Room ("Salle du banquet","Salle de banquet avec beaucoup beaucoup beaucoup de personnes");
-		//Ajout des portes a la piece
-		salleBanquet.addExit("EAST",roomList.getAllDoor().get(9));
-		salleBanquet.addExit("SOUTH",roomList.getAllDoor().get(10));
-		salleBanquet.addExit("WEST",roomList.getAllDoor().get(8));
-		//Ajout de la piece au tableau
-		listRoom.add(salleBanquet);
+		//banquet hall creation 
+		banquetHall = new Room ("Salle du banquet","Salle de banquet avec beaucoup beaucoup beaucoup de personnes");
+		//addition of doors in room
+		banquetHall.addExit("EAST",roomList.getAllDoor().get(9));
+		banquetHall.addExit("SOUTH",roomList.getAllDoor().get(10));
+		banquetHall.addExit("WEST",roomList.getAllDoor().get(8));
+		//addition of doors in room
+		listRoom.add(banquetHall);
 		
-		//Creation de la Salle trone 
-		salleTrone = new Room ("Salle du trone","La ou la mechante reine vous attend");
-		//Ajout des portes a la piece
-		salleTrone.addExit("WEST", roomList.getAllDoor().get(14));
-		//Ajout de la piece au tableau
-		listRoom.add(salleTrone);
+		//throne hall creation  
+		throneHall = new Room ("Salle du trone","La ou la mechante reine vous attend");
+		//addition of doors in room
+		throneHall.addExit("WEST", roomList.getAllDoor().get(14));
+		//addition of doors in room
+		listRoom.add(throneHall);
 		
-		//Creation du Vestibule 
+		//vestibule creation
 		vestibule = new Room ("Vestibule","Les gardes sont la pour botter ton petiit cul");
-		//Ajout des portes a la piece
+		//addition of doors in room
 		vestibule.addExit("EAST", roomList.getAllDoor().get(13));
 		vestibule.addExit("WEST", roomList.getAllDoor().get(12));
-		//Ajout de la piece au tableau
+		//addition of doors in room
 		listRoom.add(vestibule);
 		
-		//Creation de la Prison 
-		prison = new Room ("Prison","Ceci est la piece ou tu perd tout et tu pleure!!!"); 
-		//Ajout des portes a la piece
-		prison.addExit("WEST", roomList.getAllDoor().get(1));
-		//Ajout de la piece au tableau
-		listRoom.add(prison);
+		//jail creation
+		jail = new Room ("jail","Ceci est la piece ou tu perd tout et tu pleure!!!"); 
+		//addition of doors in room
+		jail.addExit("WEST", roomList.getAllDoor().get(1));
+		//addition of doors in room
+		listRoom.add(jail);
 		
-		//Creation de la cuisine
-		cuisine = new Room ("Cuisine","Ceci est la piece ou tout sens bon et ou tu peut prendre des kilos");
-		//Ajout des portes a la piece
-		cuisine.addExit("NORTH", roomList.getAllDoor().get(11));
-		//Ajout de la piece au tableau
-		listRoom.add(cuisine);
+		//kitchen creation
+		kitchen = new Room ("kitchen","Ceci est la piece ou tout sens bon et ou tu peut prendre des kilos");
+		//addition of doors in room
+		kitchen.addExit("NORTH", roomList.getAllDoor().get(11));
+		//addition of doors in room
+		listRoom.add(kitchen);
 	}
+	
+	/**
+	 * Method getters which, 
+	 * @return the rooms list of the castle
+	 */
 	
 	public ArrayList<Room> getAllRooms()
 	{
