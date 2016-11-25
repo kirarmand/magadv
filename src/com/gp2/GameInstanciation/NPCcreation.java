@@ -53,10 +53,10 @@ public class NPCcreation {
 		
 		unicorn = new NPC("Coro", "The castle guardian", unicornSentences);
 		unicornSentences.add("Snif Snif");
-		unicornSentences.add("On m'a vole ma corne");
-		unicornSentences.add("Je patogeais tranquillement dans l'eau quand un pervers, sadique et psychopathe \n"
-				+ "dangereux m'a pris m'a magnifique, somptueuse, flambloyante corne !");
-		unicornSentences.add("Retrouvez-la moi s'il vous plait !!! ");
+		unicornSentences.add("someone stole my horne");
+		unicornSentences.add("I was quietly floundering in the water when a pervert, sadistic and psychopath\n"
+				+ "took my beautiful, sumptuous, flamboyant horn !");
+		unicornSentences.add("Please, find it for me !!");
 		
 		
 		otis = new NPC("Otis"," Villager who gives the purpose of the game and the sense of life", otisSentences);
@@ -74,7 +74,7 @@ public class NPCcreation {
 				+ "l\'interlocuteur en face, je dirais, le miroir \n"
 				+ "qui vous aide a avancer. Or, ce n\'est pas mon \n"
 				+ "cas, comme je le disais la, puisque moi au contraire,\n"
-				+ " j\'ai pu ; et je dis merci � la vie, je lui dis merci,\n"
+				+ " j\'ai pu ; et je dis merci a la vie, je lui dis merci,\n"
 				+ " je chante la vie, je danse la vie... Je ne suis qu\'amour ! \n"
 				+ "Et finalement, quand beaucoup de gens aujourd\'hui me disent \n"
 				+ "\"Mais comment fais-tu pour avoir cette humanite ?\",\n"
@@ -85,38 +85,38 @@ public class NPCcreation {
 				+ "peut-etre seulement a me mettre au service de la communaute,\n"
 				+ " a faire le don, le don de soi...");
 		
-		//Dans la salle de banquet
+		//In the banquet hall
 		guest = new NPC("Edouard", " Invite to the banquet: Gives the opportunity to advance in the game", gestSentences);
-		gestSentences.add("Bonjour !");
-		gestSentences.add("Je suis tres honorer de voir le sauveur de notre chere licorne !");
-		gestSentences.add("Veux tu voir la reine ? (O/N) ");
-		gestSentences.add("Voici le laisser-passer A38, il vous aidera dans votre quete. \n"
-				+ "Bonne chance");
-		gestSentences.add("Elle est belle la reine");
+		gestSentences.add("Hello!");
+		gestSentences.add("I am very honored to see the savior of our dear unicorn!");
+		gestSentences.add("Do you want to see the queen ? (Y/N) ");
+		gestSentences.add("Here i have the 'laisser-passer A38', it can help you in your quest. \n"
+				+ "Good Luck");
+		gestSentences.add("Look how the queen is beautiful");
 		
 		villager1 = new NPC("Edwin", "Villager : Lets get the sense of the game", villager1Sentences);
-		villager1Sentences.add("Bonjour ! \n"
-				+ "Allez voir mon ami Otis dans la cours, il vous donnera le sens cach� de ce jeu");
+		villager1Sentences.add("Hello ! \n"
+				+ "Go see my friend Otis in the courtyard, he will gives you the meaning of this game");
 		
-		villager2 = new NPC("Th�odore", "Villager : Gives an indication of the thief", villager2Sentences);
-		villager2Sentences.add("j�ai vu quelqu�un aller dans l��curie,\n"
-				+ " il avait l�air press� � \n"
-				+ "suspect � Vous n�auriez pas vu ma � \n"
-				+ "cuill�re ?");
+		villager2 = new NPC("Theodore", "Villager : Gives an indication of the thief", villager2Sentences);
+		villager2Sentences.add("I saw someone go in the stable,\n"
+				+ "he seemed hurried \n"
+				+ "and suspect. Have you seen my... \n"
+				+ "spoon ?");
 		
 		villager3 = new NPC("Brunissen", "Villager : Gives a hint for the next steps", villager3Sentences);
-		villager3Sentences.add("quel beau banquet, c�est la saison des baies, que faire � cuisiner...");
+		villager3Sentences.add("Such a nice banquet, it is the season of the berries, what to cook...");
 		
-		villager4 = new NPC("Adelaide", "Donne un indice pour les �tapes d'apres", villager4Sentences);
-		villager4Sentences.add("je crois que l�ecurie est fermee. La reine doit avoir la clef");
+		villager4 = new NPC("Adelaide", "Give an indication for next steps", villager4Sentences);
+		villager4Sentences.add("I guess the stable is closed. The Queen may have the key");
 		
-		//Dans le vestibule
+		//In the vestibule
 		guard1 = new NPC("Alphonse", "Protects the queen from people who bother her", guard1Sentences);
-		guard1Sentences.add("Vous voulez voir la reine ? \n"
-				+ "Avez-vous le laisser-passer A38 ?");
-		guard1Sentences.add("Passez, mais on garde un oeil sur vous !");
-		guard1Sentences.add("Et vous pensez que l'on va vous laisser passer sans autorisation ! \n"
-				+ "Allez hop, en prison le gueux !");
+		guard1Sentences.add("Do you want to see the queen ? \n"
+				+ "Do you have the 'laisser-passer A38' ?");
+		guard1Sentences.add("Go , but we keep an eye on you !");
+		guard1Sentences.add("And you think that we will let you pass without authorization!\n"
+				+ "Go in jail, beggar !");
 		
 		guard2 = new NPC("Amori", "Monitors all the actions of passers-by ", guard2Sentences);
 		guard2Sentences.add("...");	
@@ -127,95 +127,94 @@ public class NPCcreation {
 		guard4 = new NPC("Granola", "Monitors all the actions of passers-by ", guard4Sentences);
 		guard4Sentences.add("...");
 		
-		//Salle du trone
+		//In the throne hall
 		throneGuard1 = new NPC("Boniface", "Be careful of what you do ...", throneGuard1Sentences);
-		throneGuard1Sentences.add("L'assassin, il a voulu tuer notre reine avec de la framboise !! \n"
-				+ "Cassius, amene au cachot le mis�rable !");
+		throneGuard1Sentences.add("The murderer, he wanted to kill our queen with raspberry !!\n"
+				+ "Cassius, send up this man in jail !");
 		
 		throneGuard2 = new NPC("Cassius", "Monitors all the actions of passers-by ", throneGuard2Sentences);
 		throneGuard2Sentences.add("...");
 		
 		queenCounsel = new NPC("Bertille", "She advises on what the queen likes eat", queenCounselSentences);
-		queenCounselSentences.add("La reine a tres faim, elle ne parlera pas tant \n"
-				+ "qu'elle n'aura pas son gateau prefere");
-		queenCounselSentences.add("Des evenements tres inquietants se passent dans le royaume. \n"
-				+ "Seule la licorne pourrait nous sauver ! ");
+		queenCounselSentences.add("The queen is very hungry, she will not talk so much without \n"
+				+ "her favorite cake");
+		queenCounselSentences.add("Very disturbing events are taking place in the kingdom. \n"
+				+ "Only the unicorn can save us ! ");
 		
-		queen = new NPC("Framboise", "Gives the key to the stable", queenSentences);
-		queenSentences.add("J'adore les myrtilles");
-		queenSentences.add("Non, non !!! Comment osez-vous \n"
-				+ "Vous n'en avez pas marre de me donner des framboise \n"
-				+ "j'en ai assez avec mon prenom ! \n"
-				+ "Chercheur venu de loin pour m'accabler de haine,\n"
-				+ " je saurais vous montrer comment meurt une reine,\n"
-				+ " je saurais vous montrer� LA DIRECTION DE LA PRISON");
-		queenSentences.add("OOOOh myrtille mon prefere ! \n"
-				+ "Tenez brave chevalier, la clef de l'ecurie. \n"
-				+ "mais faites vite le voleur va partir !");
+		queen = new NPC("Raspberry", "Gives the key to the stable", queenSentences);
+		queenSentences.add("I love blueberries");
+		queenSentences.add("No, no !! How dare you !\n"
+				+ "Are you not tired of giving me raspberry \n"
+				+ "I can not bear that name! \n"
+				+ "I will show you how a queen dies,\n"
+				+ "I will show you the direction of the JAIL");
+		queenSentences.add("OOOOh a blueberries cake, my favorite flavour ! \n"
+				+ "Take ,brave knight, the key of the stable. \n"
+				+ "But quickly, the thief is leaving !");
 		
 		kitchenHelp = new NPC("Linguini", "He is a kitchen helper", kitchenHelpSentences);
-		kitchenHelpSentences.add("Vous n'avez rien a faire ici ! Sortez");
-		kitchenHelpSentences.add("Vous voulez un gateau pour la reine ? \n"
-				+ "il me faut : des oeufs, de la farine, des framboises, du sucre, du chocolat blanc");
-		kitchenHelpSentences.add("Ah quelqu'un de serviable dans cette cuisine ! \n"
-				+ "voici le muffin de la reine ! ");
+		kitchenHelpSentences.add("You have nothing to do here ! Get out");
+		kitchenHelpSentences.add("Do you want a cake for the queen ? \n"
+				+ "I need : eggs, flour, raspberries, sugar, white chocolate");
+		kitchenHelpSentences.add("Ah finally someone helpful in this kitchen ! \n"
+				+ "Here is the muffin of the queen !");
 		
 		kitchenChef = new NPC("Gusto", "He is a kitchen chef", kitchenChefSentences);
-		kitchenChefSentences.add("Vous n'avez rien a faire ici ! Sortez");
-		kitchenChefSentences.add("Vous voulez un gateau pour la reine ? \n"
-				+ "il me faut : des oeufs, de la farine, des myrtilles, du sucre, du chocolat blanc");
-		kitchenChefSentences.add("Ah enfin quelqu'un de serviable dans cette cuisine ! \n"
-				+ "voici le muffin de la reine ! ");
+		kitchenChefSentences.add("You have nothing to do here ! Get out");
+		kitchenChefSentences.add("Do you want a cake for the queen ? \n"
+				+ "I need : eggs, flour, blueberries, sugar, white chocolate");
+		kitchenChefSentences.add("Ah finally someone helpful in this kitchen !\n"
+				+ "Here is the muffin of the queen ! ");
 
 		saucier = new NPC("Lalo", "He is the castle saucier", saucierSentences);
-		saucierSentences.add("Vous n'avez rien a faire ici ! Sortez");
-		saucierSentences.add("Vous voulez quoi ? \n"
-				+ "j'ai une tete � faire des gateau ?\n"
-				+ "je suis un chef saucier, c'est moi qui m'occupe des sauces de daube, de ragout, de bouillon\n"
-				+ "j'ai une tete a faire des muffins ? \n"
-				+ "personne ne respecte les personnes comme moi ... \n"
-				+ "je suis le meilleur dans tout le cont� !!!");
+		saucierSentences.add("You have nothing to do here ! Get out");
+		saucierSentences.add("What do you want? \n"
+				+ "Do I look like someone who makes cakes ? \n"
+				+ "I am a 'saucier' chef, I'm the one who takes care of sauces.\n"
+				+ "Do I look like someone who makes muffins ?  \n"
+				+ "Nobody respects people like me ...\n"
+				+ "I am the best saucier ever !!");
 		
 		thief = new NPC("Jackouille", "He is the corn thief", thiefSentences);
-		thiefSentences.add("Tu veux recuperer la corne ? \n "
-				+ "allez viens ce sont des fous dans ce chateau \n"
-				+ "je part me faire plein d�argent avec cette corne \n"
-				+ "les gens ils adorent les cornes de licorne");
-		thiefSentences.add("Alors tu viens avec moi vivre une vie de roi, ou tu reste l� ?! (O/N)");
-		thiefSentences.add("Allons y gaiement !! A cheval camarade !");
-		thiefSentences.add("Aie ! arrete, arrete, tiens prend la ta licorne");
+		thiefSentences.add("Do you want to get back your corn ? \n "
+				+ "come with me they are totally crazy in this castle \n"
+				+ "I will give a lot of money with this corn \n"
+				+ "people loves corns of unicorn");
+		thiefSentences.add("So you come with me to live a king's life, or you stay here in a crap life ? (Y/N)");
+		thiefSentences.add("come on bro ! on horseback ! ");
+		thiefSentences.add("Stop it ! take your stupid corn and get out of my sight");
 		
 		
 		blueberryChest = new NPC("Coffre 1", "locked chest", blueberryChestSentences);
-		blueberryChestSentences.add("Pour m'ouvrir, repond a l'enigme suivante ... \n"
-				+ "Sit�t que l�on me nomme je n�existe plus. Qui suis-je ?");
-		blueberryChestSentences.add("Faux. Recommencez !");
-		blueberryChestSentences.add("Felicitation, voici les myrtilles !");
+		blueberryChestSentences.add("To unlock me, answer to this question ... \n"
+				+ "As soon as I am called, I do not exist anymore. Who am I ?");
+		blueberryChestSentences.add("Wrong, retry !");
+		blueberryChestSentences.add("Congratulations, take the bluberries !");
 
 		raspberryChest = new NPC("Coffre 2", "locked chest", raspberryChestSentences);
-		raspberryChestSentences.add("Pour m'ouvrir, repond a l'enigme suivante ...\n"
-				+ "Quelle est cette chose qui s'allonge quand on la prend entre les mains,\n"
-				+ " quand on la passe entre les seins et quand on l'introduit dans une fente ?");
-		raspberryChestSentences.add("Faux. Recommencez !");
-		raspberryChestSentences.add("Felicitation, voici les framboises !");
+		raspberryChestSentences.add("To unlock me, answer to this question ... \n"
+				+ "What is this thing that lengthens in the hands,\n"
+				+ " When it is passed between the breasts and when it is inserted into a slot?");
+		raspberryChestSentences.add("Wrong, retry !");
+		raspberryChestSentences.add("Congratulations, take the raspberries !");
 	
 		emptyChest = new NPC("Coffre 3", "locked chest", emptyChestSentences);
-		emptyChestSentences.add("Pour m'ouvrir, repond a l'enigme suivante ...\n"
-				+ "Trouvez ce que cela peut bien �tre :\n"
-				+ "C'est mieux que dieu \n"
-				+ "C'est pire que le diable.\n"
-				+ "Les pauvres en ont.\n"
-				+ "Les riches en ont besoin.\n"
-				+ "Et si on en mange, on meurt.\n"
-				+ "Plus rapide que la lumi�re");
-		emptyChestSentences.add("Faux. Recommencez !");
-		emptyChestSentences.add("Felicitation vous avez r�cuperer la solution !");
+		emptyChestSentences.add("To unlock me, answer to this question ... \n"
+				+ "Find what it may be : \n"
+				+ "It is better than god \n"
+				+ "It is worst than devil\n"
+				+ "Poor people have it.\n"
+				+ "Rich people needs it\n"
+				+ "If we eat it, we die .\n"
+				+ "It is faster than the light");
+		emptyChestSentences.add("Wrong, retry !");
+		emptyChestSentences.add("Congratulation, you get the solution");
 		
 		whiteChocolateChest = new NPC("Coffre 4", "locked chest", whiteChocolateChestSentences);
-		whiteChocolateChestSentences.add("Pour m'ouvrir, repond a l'enigme suivante ...\n"
-				+ "Plus je suis grande, moins on me voit. Qui suis-je ?");
-		whiteChocolateChestSentences.add("Faux. Recommencez !");
-		whiteChocolateChestSentences.add("Felicitation, voici le chocolat blanc !");
+		whiteChocolateChestSentences.add("To unlock me, answer to this question ...\n"
+				+ "The bigger I am, the less you see me. Who am I ?");
+		whiteChocolateChestSentences.add("Wrong, retry !");
+		whiteChocolateChestSentences.add("Congratulation, take the white chocolate");
 		
 		}
 }
