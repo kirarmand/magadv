@@ -26,13 +26,67 @@ import java.util.ArrayList;
 	private Item sugar;
 	private Item key;
 	private Item egg;
-    private Item horn;
+	private Item horn;
 	private Item zucchini;
 	private Item carrot;
 	private Item milk;
 
 	//creation of all getters
+	public Item getRaspberry() {
+		return raspberry;
+	}
 
+	public Item getBlueberry() {
+		return blueberry;
+	}
+
+	public Item getWhiteChocolate() {
+		return whiteChocolate;
+	}
+
+	public Item getA38() {
+		return A38;
+	}
+
+	public Item getFlour() {
+		return flour;
+	}
+
+	public Item getBlueberryMuffin() {
+		return blueberryMuffin;
+	}
+
+	public Item getRaspberryMuffin() {
+		return raspberryMuffin;
+	}
+
+	public Item getSugar() {
+		return sugar;
+	}
+
+	public Item getKey() {
+		return key;
+	}
+
+	public Item getEgg() {
+		return egg;
+	}
+
+	public Item getHorn() {
+		return horn;
+	}
+
+	public Item getZucchini() {
+		return zucchini;
+	}
+
+	public Item getCarrot() {
+		return carrot;
+	}
+
+	public Item getMilk() {
+		return milk;
+	}
 
     /**
      * instanciation of all items
