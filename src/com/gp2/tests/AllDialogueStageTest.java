@@ -1,3 +1,5 @@
+package com.gp2.tests;
+
 /**
  * 
  */
