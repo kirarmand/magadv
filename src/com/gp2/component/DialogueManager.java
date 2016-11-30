@@ -27,4 +27,7 @@ public class DialogueManager {
 	public void removeDialogueStage(DialogueStage newDialogue){
 		dialogueStageStack.remove(newDialogue);
 	}
+	public ArrayList<DialogueStage> getDialogueStage(){
+		return dialogueStageStack;
+	}
 }
