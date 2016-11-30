@@ -2,6 +2,7 @@
  * Coucou les gens c'est Dori !!
  */
 package com.gp2.tests;
+import com.gp2.component.*;
 
 import static org.junit.Assert.*;
 
@@ -12,22 +13,22 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.gp2.component.NPC;
-
 /**
  * @author group2
  */
 public class EntityItemNPCTest {
 
     NPC brenda;
+    DialogueManager sentence = new DialogueManager(new DialogueStage("hello i'm the mama"));
+    ArrayList<DialogueManager> listDialogue;
 
     /**
      * @throws java.lang.Exception
      */
     @Before
     public void setUp() throws Exception {
-        brenda = new NPC("Brenda", "The mama of the familia",
-                new ArrayList<>(Arrays.asList("Hello", "Im la mama")));
+    	listDialogue.add(sentence);
+        brenda = new NPC("Brenda", "The mama of the familia",listDialogue);   
     }
 
     /**
@@ -36,16 +37,6 @@ public class EntityItemNPCTest {
     @After
     public void tearDown() throws Exception {
     }
-
-    /**
-     * Test method for {@link com.gp2.component.NPC#getSentences()}.
-     * Test the getSentences
-     */
-    @Test
-    public void testGetSentences() {
-        assertEquals(brenda.getSentences(), new ArrayList<>(Arrays.asList("Hello", "Im la mama")));
-    }
-
     /**
      * Test method for {@link com.gp2.component.Entity#getName()}.
      */
@@ -61,5 +52,14 @@ public class EntityItemNPCTest {
     public void testGetDescription() {
         assertEquals(brenda.getDescription(), "The mama of the familia");
     }
+    /**
+     * Test method for {@link com.gp2.component.Entity#getDialogueManager()}.
+     */
+    @Test
+    public void testGetDialogueManager() {
+        assertEquals(brenda.getDialogueManager(), "The mama of the familia");
+    }
+    
+    
 
 }

@@ -9,8 +9,8 @@ public class DialogueStage {
     */
     private String sentence;
 
-    public DialogueStage(String sentence) {
-        sentence = sentence;
+    public DialogueStage(String newSentence) {
+        sentence = newSentence;
     }
 
     public String getSentence() {
