@@ -1,5 +1,5 @@
 /**
- * Coucou les gens c'est Dori !!
+ * 
  */
 package com.gp2.tests;
 
@@ -12,6 +12,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.gp2.component.DialogueManager;
+import com.gp2.component.DialogueStage;
 import com.gp2.component.NPC;
 
 /**
@@ -20,14 +22,17 @@ import com.gp2.component.NPC;
 public class EntityItemNPCTest {
 
     NPC brenda;
+    ArrayList<DialogueManager> listDialogue;
+    DialogueManager sentence = new DialogueManager(new DialogueStage("hello"));
+    
 
     /**
      * @throws java.lang.Exception
      */
     @Before
     public void setUp() throws Exception {
-        brenda = new NPC("Brenda", "The mama of the familia",
-                new ArrayList<>(Arrays.asList("Hello", "Im la mama")));
+    	listDialogue.add(sentence);
+        brenda = new NPC("Brenda", "The mama of the familia",listDialogue);
     }
 
     /**
@@ -36,16 +41,6 @@ public class EntityItemNPCTest {
     @After
     public void tearDown() throws Exception {
     }
-
-    /**
-     * Test method for {@link com.gp2.component.NPC#getSentences()}.
-     * Test the getSentences
-     */
-    @Test
-    public void testGetSentences() {
-        assertEquals(brenda.getSentences(), new ArrayList<>(Arrays.asList("Hello", "Im la mama")));
-    }
-
     /**
      * Test method for {@link com.gp2.component.Entity#getName()}.
      */
@@ -63,3 +58,4 @@ public class EntityItemNPCTest {
     }
 
 }
+
