@@ -21,9 +21,7 @@ public class NPC extends Entity{
 	/**
 	 * This arraylist allows character to speak
 	 */
-	private ArrayList<String> sentences;
-	
-	
+	private ArrayList<DialogueManager> stackList;
 	/**
 	 * 
 	 */
@@ -36,9 +34,9 @@ public class NPC extends Entity{
 	 * @param description	a description of the NPC
 	 * @param sentences	all the sentences this NPC will be able to say
 	 */
-	public NPC(String name, String description, ArrayList<String> sentences) {
+	public NPC(String name, String description, ArrayList<DialogueManager> newStackList) {
 		super(name, description);
-		this.sentences = sentences;
+		this.stackList = newStackList;
 	}
 
 	
@@ -46,8 +44,8 @@ public class NPC extends Entity{
 	 * GETTERS section for the NPC relative attributes
 	 */
 	
-	public ArrayList<String> getSentences() {
-		return sentences;
+	public ArrayList<DialogueManager> getDialogueManager() {
+		return stackList;
 	}
 
 	public ArrayList<Entity> getInventory() {
