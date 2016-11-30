@@ -1,6 +1,7 @@
 package com.gp2.GameInstanciation;
 import com.gp2.component.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class NPCcreation {
 	
@@ -39,28 +40,30 @@ public class NPCcreation {
 	private NPC emptyChest;
 	private NPC whiteChocolateChest;
 	
-	private ArrayList<String> otisSentences, unicornSentences, gestSentences;
-	private ArrayList<String> villager1Sentences, villager2Sentences, villager3Sentences, villager4Sentences;
-	private ArrayList<String> guard1Sentences, guard2Sentences, guard3Sentences, guard4Sentences;
-	private ArrayList<String> throneGuard1Sentences, throneGuard2Sentences, queenCounselSentences, queenSentences;
-	private ArrayList<String> kitchenHelpSentences, kitchenChefSentences, saucierSentences;
-	private ArrayList<String> thiefSentences, blueberryChestSentences, raspberryChestSentences, emptyChestSentences, whiteChocolateChestSentences;
+	private ArrayList<DialogueManager> otisSentences, unicornSentences, guestSentences;
+	private ArrayList<DialogueManager> villager1Sentences, villager2Sentences, villager3Sentences, villager4Sentences;
+	private ArrayList<DialogueManager> guard1Sentences, guard2Sentences, guard3Sentences, guard4Sentences;
+	private ArrayList<DialogueManager> throneGuard1Sentences, throneGuard2Sentences, queenCounselSentences, queenSentences;
+	private ArrayList<DialogueManager> kitchenHelpSentences, kitchenChefSentences, saucierSentences;
+	private ArrayList<DialogueManager> thiefSentences, blueberryChestSentences, raspberryChestSentences, emptyChestSentences, whiteChocolateChestSentences;
 	
 	/**
 	 * Creation of all game NPC
 	*/
 	public void NPCCreation(){
 		
+		//Unicorn
+		DialogueManager dialogueManagerUnicorn = new DialogueManager(new DialogueStage("Snif snif"));
+		dialogueManagerUnicorn .addDialogueStage(new DialogueStage("someone stole my horne"));
+		dialogueManagerUnicorn .addDialogueStage(new DialogueStage("I was quietly floundering in the water when a pervert, sadistic and psychopath\n"
+				+ "took my beautiful, sumptuous, flamboyant horn !"));
+		dialogueManagerUnicorn .addDialogueStage(new DialogueStage("Please, find it for me !!"));
+		unicornSentences.add(dialogueManagerUnicorn );
 		unicorn = new NPC("Coro", "The castle guardian", unicornSentences);
-		unicornSentences.add("Snif Snif");
-		unicornSentences.add("someone stole my horne");
-		unicornSentences.add("I was quietly floundering in the water when a pervert, sadistic and psychopath\n"
-				+ "took my beautiful, sumptuous, flamboyant horn !");
-		unicornSentences.add("Please, find it for me !!");
 		
-		
-		otis = new NPC("Otis"," Villager who gives the purpose of the game and the sense of life", otisSentences);
-		otisSentences.add("Mais, vous savez, moi je ne crois pas \n"
+		//Otis
+		DialogueManager dialogueManagerOtis = new DialogueManager(new DialogueStage("Snif snif"));
+		dialogueManagerOtis.addDialogueStage(new DialogueStage("Mais, vous savez, moi je ne crois pas \n"
 				+ "qu'il y ait de bonne ou de mauvaise situation.\n"
 				+ " Moi, si je devais resumer ma vie aujourd\'hui \n"
 				+ "avec vous, je dirais que c\'est d\'abord des \n"
@@ -83,16 +86,23 @@ public class NPCcreation {
 				+ " m\'a pousse aujourd\'hui a entreprendre une\n"
 				+ " construction mecanique, mais demain, qui sait, \n"
 				+ "peut-etre seulement a me mettre au service de la communaute,\n"
-				+ " a faire le don, le don de soi...");
+				+ " a faire le don, le don de soi..."));
+		otisSentences.add(dialogueManagerOtis);
+		otis = new NPC("Otis"," Villager who gives the purpose of the game and the sense of life", otisSentences);
 		
 		//In the banquet hall
-		guest = new NPC("Edouard", " Invite to the banquet: Gives the opportunity to advance in the game", gestSentences);
-		gestSentences.add("Hello!");
-		gestSentences.add("I am very honored to see the savior of our dear unicorn!");
-		gestSentences.add("Do you want to see the queen ? (Y/N) ");
-		gestSentences.add("Here i have the 'laisser-passer A38', it can help you in your quest. \n"
-				+ "Good Luck");
-		gestSentences.add("Look how the queen is beautiful");
+		
+		//Guest
+		DialogueManager dialogueManagerGuest = new DialogueManager(new DialogueStage("Hello!"));
+		dialogueManagerGuest.addDialogueStage(new DialogueStage("someone stole my horne"));
+		dialogueManagerGuest .addDialogueStage(new DialogueStage("I am very honored to see the savior of our dear unicorn!"));
+		dialogueManagerGuest .addDialogueStage(new DialogueStageChoice("Do you want to see the queen ?",new ArrayList<>(Arrays.asList("yes","no")),0));
+		dialogueManagerGuest .addDialogueStage(new DialogueStageGiveObject("Here i have the 'laisser-passer A38', it can help you in your quest. \n"
+				+ "Good Luck",new ItemCreation().getA38()));
+		guestSentences.add(dialogueManagerGuest);
+		guest = new NPC("Coro", "The castle guardian", guestSentences);
+
+///////************* A REFAIRE *******************
 		
 		villager1 = new NPC("Edwin", "Villager : Lets get the sense of the game", villager1Sentences);
 		villager1Sentences.add("Hello ! \n"
