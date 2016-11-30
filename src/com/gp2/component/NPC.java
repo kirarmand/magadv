@@ -32,7 +32,7 @@ public class NPC extends Entity{
 	 * 
 	 * @param name	the name of the NPC
 	 * @param description	a description of the NPC
-	 * @param sentences	all the sentences this NPC will be able to say
+	 * @param newStackList	all the sentences this NPC will be able to say
 	 */
 	public NPC(String name, String description, ArrayList<DialogueManager> newStackList) {
 		super(name, description);

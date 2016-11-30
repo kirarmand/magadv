@@ -21,7 +21,7 @@ public class DialogueStageChoice extends DialogueStage {
         this.goodAnswer = goodAnswer;
     }
 
-    private Boolean goodAnswer(int propose){
+    public Boolean goodAnswer(int propose){
         return (goodAnswer == propose);
     }
 }

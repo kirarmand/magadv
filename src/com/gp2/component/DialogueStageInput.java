@@ -8,13 +8,13 @@ public class DialogueStageInput extends DialogueStage {
 
     private String goodAnswer;
 
-    public DialogueStageInput(String sentence, ArrayList<String> answers, String goodAnswer) {
+    public DialogueStageInput(String sentence, ArrayList<String> answers) {
         super(sentence);
         this.answers = answers;
         this.goodAnswer = goodAnswer;
     }
 
-    private Boolean goodAnswer(String propose){
+    public Boolean goodAnswers(String propose){
         return (goodAnswer == propose);
     }
 }

@@ -28,6 +28,11 @@ public class AllDialogueStageTest {
 	private Exit exit1, exit2;
 	private Item dummy;
 	private DialogueStage truck1;
+    private ArrayList <String> arrayTest;
+    private DialogueStageChoice truck2;
+    private DialogueStageExitJail truck3;
+    private DialogueStageInput truck4;
+    private DialogueStageGiveObject truck5;
 
 	/**
 	 * @throws Exception
@@ -45,6 +50,11 @@ public class AllDialogueStageTest {
         sentence3 = "coucou c'est eux";
         testNumber = 3;
         truck1 = new DialogueStage (sentence1);
+        arrayTest = new ArrayList<>(Arrays.asList("Hello", "Im la mama"));
+        truck2 = new DialogueStageChoice(sentence1,arrayTest,3);
+        truck3 = new DialogueStageExitJail(sentence1,exit1);
+        truck4 = new DialogueStageInput(sentence2,arrayTest);
+        truck5 = new DialogueStageGiveObject(sentence1,dummy);
 	}
 
 	/**
@@ -55,72 +65,26 @@ public class AllDialogueStageTest {
 	}
 
 	@Test
-    public testGetSentence(){
-        assertEquals(DialogueStage.getSentence(), sentence1);
+    public void testGetSentence(){
+        assertEquals(truck1.getSentence(), new DialogueStage(sentence1).getSentence());
     }
 
+    @Test
+    public void testGoodAnswer(){
+        assertEquals(truck2.goodAnswer(3), new DialogueStageChoice(sentence1,arrayTest,3));
+    }
 
-	/**
-	 * Test method for {@link Room#addExit(String, Exit)}.
-	 * Test the adding of a new suitable exit.
-	 */
-	@Test
-	public void testAddNewGoodExit() {
-		Exit exit1 = new Exit(roomA, roomB);
-		roomA.addExit("north", exit1);
-		assertEquals(roomA.getExits().get("north"),(exit1));
-	}
+    @Test
+    public void testGetGoJAil(){
+        assertTrue(truck3.getGoJail() instanceof Exit);
+    }
 
-	/**
-	 * Test method for {@link Room#addExit(String, Exit)}.
-	 * Test the adding of a exit with wrong starting room
-	 */
-	@Test
-	public void testAddNewBadStartExit() {
-		//Try to set an exit with a Bad Starting Room
-		Exit exitBadStartingRoom = new Exit(new Room("WC", "You dont wanna know"), roomB);
-		roomA.addExit("north", exitBadStartingRoom);
-		assertTrue(!roomA.getExits().containsKey("north"));
-	}
-
-	/**
-	 * Test method for {@link Room#addExit(String, Exit)}.
-	 * Test the adding of a exit with no direction given
-	 */
-	@Test
-	public void testExitAddNewNoDirectionGiven() {
-		//Try to set an exit with no direction
-		Exit goodExit = new Exit(roomA, roomB);
-		roomA.addExit("", goodExit);
-		assertTrue(!roomA.getExits().containsValue(goodExit));
-	}
-
-	/**
-	 * Test method for {@link Room#addExit(String, Exit)}.
-	 * Test the adding of a exit with direction that is already given
-	 */
-	@Test
-	public void testExitAddNewDirectionAlreadyGiven() {
-		//Try to set an exit with the same direction as an other one
-		Exit goodExit = new Exit(roomA, roomB);
-		roomA.addExit("north", goodExit);
-		assertTrue(roomA.getExits().containsValue(goodExit));
-		Exit toWaterCloset = new Exit(roomA, new Room("WC", "You dont wanna know"));
-		roomA.addExit("north", toWaterCloset);
-		assertTrue(!roomA.getExits().containsValue(toWaterCloset));
-	}
-
-	/**
-	 * Test method for {@link Room#addExit(String, Exit)}.
-	 * Test the adding of a exit with exit that is already given
-	 */
-	@Test
-	public void testExitAddNewExitAlreadyGiven() {
-		//Try to set an exit with the same direction as an other one
-		Exit goodExit = new Exit(roomA, roomB);
-		roomA.addExit("north", goodExit);
-		assertTrue(roomA.getExits().containsValue(goodExit));
-		roomA.addExit("south", goodExit);
-		assertTrue(!roomA.getExits().containsKey("south"));
-	}
+    @Test
+    public void testGoodAnswers(){
+        assertTrue(truck4.goodAnswers("Hello"));
+    }
+    @Test
+    public void testGetItem(){
+            assertEquals(truck5.getItem(), dummy);
+    }
 }

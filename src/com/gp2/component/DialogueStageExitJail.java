@@ -6,14 +6,14 @@ package com.gp2.component;
 
 public class DialogueStageExitJail extends DialogueStage {
 
-	private Exit goJAil;
+	private Exit goJail;
 
 	public DialogueStageExitJail(String sentence, Exit goJAil) {
 		super(sentence);
-		this.goJAil = goJAil;
+		this.goJail = goJAil;
 	}
 
-	public Exit getGoJAil() {
-		return goJAil;
+	public Exit getGoJail() {
+		return goJail;
 	}
 }
