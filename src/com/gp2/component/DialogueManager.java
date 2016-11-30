@@ -10,11 +10,12 @@ public class DialogueManager {
 	 */
 	
 	private ArrayList<DialogueStage> dialogueStageStack;
+	private int progress;
 	
 	public DialogueManager(DialogueStage firstDialogue){
 		dialogueStageStack.add(firstDialogue);
+		progress = 0;
 	}
-	
 	/*
 	 * add a dialogue stage into the list
 	 */
@@ -29,5 +30,8 @@ public class DialogueManager {
 	}
 	public ArrayList<DialogueStage> getDialogueStage(){
 		return dialogueStageStack;
+	}
+	public int getProgress(){
+		return progress;
 	}
 }
