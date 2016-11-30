@@ -1,17 +1,17 @@
 package com.gp2.component;
 
-public abstract class DialogueStage {
+public class DialogueStage {
 
     /*
     * class who give the basics answers of the NPC
     */
-    private String Sentence;
+    private String sentence;
 
     public DialogueStage(String sentence) {
-        Sentence = sentence;
+        sentence = sentence;
     }
 
     public String getSentence() {
-        return Sentence;
+        return sentence;
     }
 }
