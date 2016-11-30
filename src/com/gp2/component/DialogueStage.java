@@ -1,5 +1,14 @@
 package com.gp2.component;
 
-public class DialogueStage {
+public abstract class DialogueStage {
 
+    private String Sentence;
+
+    public DialogueStage(String sentence) {
+        Sentence = sentence;
+    }
+
+    public String getSentence() {
+        return Sentence;
+    }
 }
