@@ -3,6 +3,7 @@ import com.gp2.component.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+//class for creation of all NPC
 public class NPCcreation {
 	
 	//NPC
